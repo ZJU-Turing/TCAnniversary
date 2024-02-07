@@ -1,0 +1,28 @@
+{
+    "name": "turing-courses-anniversary",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "remark2csv": "node --env-file=.env.local ./tools/remark2csv.js",
+        "uploads": "node --env-file=.env.local ./tools/uploadScores.js",
+        "uploada": "node --env-file=.env.local ./tools/uploadAliases.js"
+    },
+    "dependencies": {
+        "element-plus": "^2.5.3",
+        "leancloud-storage": "^2.5.4",
+        "papaparse": "^5.4.1",
+        "vue": "^3.4.15",
+        "vue-router": "^4.2.5"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-legacy": "^5.2.0",
+        "@vitejs/plugin-vue": "^5.0.3",
+        "unplugin-auto-import": "^0.17.3",
+        "unplugin-vue-components": "^0.26.0",
+        "vite": "^5.0.11"
+    }
+}
