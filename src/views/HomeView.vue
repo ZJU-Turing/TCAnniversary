@@ -8,15 +8,23 @@ import { onMounted, reactive, ref } from "vue";
 
 const data = reactive([]);
 const loading = ref(false);
+const updTime = ref("");
 
 const scoreFn = d => d.composition.reduce((acc, cur) => acc + cur.score, 0);
+
+const formatDate = d => {
+    d = new Date(d);
+    return `${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日 ${d.getHours()}:${d.getMinutes()}`;
+};
 
 const getData = async () => {
     loading.value = true;
 
     let ss = await lc.getAllData("Score");
     let alias = await lc.getAllData("Alias");
-    console.log(alias);
+
+    updTime.value = formatDate(ss[0].updatedAt);
+
     for (let i = 0; i < ss.length; i++) {
         let s = ss[i];
         let al = alias.find(a => a.key == s.name);
@@ -43,7 +51,7 @@ onMounted(async () => {
     <div class="items">
         <ItemComp v-for="(d, r) in data" :data="d" :rank="r + 1" />
     </div>
-    <FooterComp />
+    <FooterComp :updated="updTime" />
 </template>
 
 <style scoped>

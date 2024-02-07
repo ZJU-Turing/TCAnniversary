@@ -1,9 +1,11 @@
 <script setup>
+const $ = defineProps({ updated: String });
 const nowYear = new Date().getFullYear();
 </script>
 
 <template>
     <div class="wrapper">
+        <div class="upd">排行榜最后更新于 {{ updated }}</div>
         Developed by <a href="https://xecades.xyz/">Xecades</a> &copy; {{ nowYear }}
     </div>
 </template>
@@ -20,5 +22,10 @@ const nowYear = new Date().getFullYear();
 .wrapper a {
     text-decoration: none;
     color: #739bc4;
+}
+
+.upd {
+    font-size: .9rem;
+    margin-bottom: 5px;
 }
 </style>
