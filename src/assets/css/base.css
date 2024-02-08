@@ -4,13 +4,26 @@
 }
 
 *::selection {
-    background-color: rgba(187, 221, 251, 0.5);
+    background-color: #dfd9ff80;
+}
+
+:root {
+    --el-color-primary: #736bb7;
+    --el-color-primary-light-3: #a298da;
+    --el-border-color-light: #eceaff;
+    --el-box-shadow-light: 0px 0px 12px #5848b51f;
+    --el-fill-color-light: #f8f7ff;
 }
 
 html,
 body {
     margin: 0;
     background-color: #fff;
+    touch-action: manipulation;
+}
+
+.el-link.el-link--primary.is-underline:hover:after {
+    border-color: #b7b0e4;
 }
 
 @media screen and (min-width: 768px) {

@@ -61,7 +61,8 @@ const more = () => { showComp.value = !showComp.value; };
     font-style: italic;
     height: 90px;
     position: absolute;
-    color: #f7f7f7;
+    color: #f2f1f9;
+    user-select: none;
     left: 2px;
     top: -10px;
     font-family: Arial, Helvetica, sans-serif;
@@ -73,7 +74,6 @@ const more = () => { showComp.value = !showComp.value; };
     position: relative;
 }
 
-
 .right {
     position: absolute;
     right: 20px;
@@ -84,7 +84,8 @@ const more = () => { showComp.value = !showComp.value; };
 }
 
 .score {
-    margin-right: 5px;
+    margin-right: 2px;
+    vertical-align: middle;
 }
 
 .icon {
@@ -97,7 +98,7 @@ const more = () => { showComp.value = !showComp.value; };
 
 .table {
     width: 100%;
-    margin-top: 15px;
+    padding-top: 15px;
     background-color: transparent;
 }
 </style>
@@ -105,5 +106,13 @@ const more = () => { showComp.value = !showComp.value; };
 <style>
 .table tr {
     background-color: transparent;
+}
+
+.el-table__inner-wrapper::before {
+    background-color: transparent;
+}
+
+.el-table__row:last-child td.el-table__cell {
+    border-bottom: 1px solid transparent;
 }
 </style>

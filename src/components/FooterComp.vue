@@ -21,7 +21,7 @@ const nowYear = new Date().getFullYear();
 
 .wrapper a {
     text-decoration: none;
-    color: #739bc4;
+    color: #857ebd;
 }
 
 .upd {
