@@ -18,7 +18,7 @@ const more = () => { showComp.value = !showComp.value; };
 </script>
 
 <template>
-    <el-card shadow="hover" class="card">
+    <el-card shadow="hover" class="card" :rank="rank">
         <span class="rank">{{ rank }}</span>
         <el-text class="name" size="large">{{ data.name }}</el-text>
         <el-text class="right">
@@ -72,6 +72,7 @@ const more = () => { showComp.value = !showComp.value; };
     display: block;
     text-align: center;
     position: relative;
+    color: #777a81;
 }
 
 .right {
@@ -101,6 +102,63 @@ const more = () => { showComp.value = !showComp.value; };
     padding-top: 15px;
     background-color: transparent;
 }
+
+.card[rank="1"] {
+    background: linear-gradient(160deg, #fffce6 0%, transparent 80%);
+    border-color: #ffed9c;
+    --el-color-primary: #ffd518;
+    --el-color-primary-light-3: #fee98b;
+}
+
+.card[rank="1"]:hover {
+    box-shadow: 0 0 12px #feeb91cc;
+}
+
+.card[rank="1"] .rank {
+    color: #ffed9f;
+}
+
+.card[rank="1"] .name {
+    color: #fcce06;
+}
+
+.card[rank="2"] {
+    background: linear-gradient(160deg, #f5f5f5 0%, transparent 80%);
+    border-color: #dedede;
+    --el-color-primary: #b9b9b9;
+    --el-color-primary-light-3: #d8d8d8;
+}
+
+.card[rank="2"]:hover {
+    box-shadow: 0 0 12px #e8e8e8cc;
+}
+
+.card[rank="2"] .rank {
+    color: #e8e8e8;
+}
+
+.card[rank="2"] .name {
+    color: #adadad;
+}
+
+.card[rank="3"] {
+    background: linear-gradient(160deg, #fff4e9 0%, transparent 70%);
+    border-color: #ffdfd5;
+    --el-color-primary: #ff9a7a;
+    --el-color-primary-light-3: #ffcab8;
+}
+
+.card[rank="3"]:hover {
+    box-shadow: 0 0 12px #ffdacecc;
+}
+
+.card[rank="3"] .rank {
+    color: #ffdace;
+}
+
+.card[rank="3"] .name {
+    color: #ff9a7a;
+}
 </style>
 
 <style>
@@ -114,5 +172,21 @@ const more = () => { showComp.value = !showComp.value; };
 
 .el-table__row:last-child td.el-table__cell {
     border-bottom: 1px solid transparent;
+}
+
+.el-table__row:hover>td.el-table__cell {
+    background-color: #e9e6ff4d !important;
+}
+
+.card[rank="1"] .el-table__row:hover>td.el-table__cell {
+    background-color: #ffee7852 !important;
+}
+
+.card[rank="2"] .el-table__row:hover>td.el-table__cell {
+    background-color: #d9d9d952 !important;
+}
+
+.card[rank="3"] .el-table__row:hover>td.el-table__cell {
+    background-color: #ffc7b452 !important;
 }
 </style>

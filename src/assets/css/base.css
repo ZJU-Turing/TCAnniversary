@@ -22,10 +22,6 @@ body {
     touch-action: manipulation;
 }
 
-.el-link.el-link--primary.is-underline:hover:after {
-    border-color: #b7b0e4;
-}
-
 @media screen and (min-width: 768px) {
     #app {
         width: 650px;

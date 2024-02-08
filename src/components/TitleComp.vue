@@ -14,7 +14,7 @@ const $ = defineProps({
 
 <style scoped>
 .title {
-    color: #3C3578;
+    color: #6b65a6;
     font-size: 1.7rem;
     text-align: center;
     margin-top: 4rem;

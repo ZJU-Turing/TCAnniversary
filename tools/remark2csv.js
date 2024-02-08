@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import Papa from "papaparse";
 import lc from "../src/assets/js/leancloud.js";
 
-const START_DATE = "2024-02-06T02:59:36.870Z";
+const START_DATE = "2024-02-08T06:26:19.456Z";
 const DIST_PATH = "tools/remarks.csv";
 
 const getValidRemarks = async () => {
