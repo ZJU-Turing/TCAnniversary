@@ -61,7 +61,7 @@ const more = () => { showComp.value = !showComp.value; };
     font-style: italic;
     height: 90px;
     position: absolute;
-    color: #f2f1f9;
+    color: #f5f4ff;
     user-select: none;
     left: 2px;
     top: -10px;
@@ -72,7 +72,7 @@ const more = () => { showComp.value = !showComp.value; };
     display: block;
     text-align: center;
     position: relative;
-    color: #777a81;
+    color: #8f89d8;
 }
 
 .right {
@@ -81,7 +81,7 @@ const more = () => { showComp.value = !showComp.value; };
     height: 32px;
     line-height: 32px;
     top: calc((62.5px - 32px) / 2);
-    color: #9c9fa6;
+    --el-text-color-regular: #b9b3ff;
 }
 
 .score {
@@ -104,60 +104,72 @@ const more = () => { showComp.value = !showComp.value; };
 }
 
 .card[rank="1"] {
-    background: linear-gradient(160deg, #fffce6 0%, transparent 80%);
-    border-color: #ffed9c;
-    --el-color-primary: #ffd518;
-    --el-color-primary-light-3: #fee98b;
+    background: linear-gradient(160deg, #fff8c3 0%, transparent 80%);
+    border-color: #ffe87f;
+    --el-color-primary: #fad209;
+    --el-color-primary-light-3: #ffe056;
 }
 
 .card[rank="1"]:hover {
-    box-shadow: 0 0 12px #feeb91cc;
+    box-shadow: 0 0 12px #fdeb9acc;
+}
+
+.card[rank="1"] .right {
+    --el-text-color-regular: #f5cd1a;
 }
 
 .card[rank="1"] .rank {
-    color: #ffed9f;
+    color: #ffe87f;
 }
 
 .card[rank="1"] .name {
-    color: #fcce06;
+    color: #ffc004;
 }
 
 .card[rank="2"] {
-    background: linear-gradient(160deg, #f5f5f5 0%, transparent 80%);
-    border-color: #dedede;
-    --el-color-primary: #b9b9b9;
-    --el-color-primary-light-3: #d8d8d8;
+    background: linear-gradient(160deg, #f3f3f3 0%, transparent 80%);
+    border-color: #d6d6d6;
+    --el-color-primary: #9e9e9e;
+    --el-color-primary-light-3: #c4c4c4;
 }
 
 .card[rank="2"]:hover {
     box-shadow: 0 0 12px #e8e8e8cc;
 }
 
+.card[rank="2"] .right {
+    --el-text-color-regular: #b5b5b5;
+}
+
 .card[rank="2"] .rank {
-    color: #e8e8e8;
+    color: #d6d6d6;
 }
 
 .card[rank="2"] .name {
-    color: #adadad;
+    color: #969696;
 }
 
 .card[rank="3"] {
-    background: linear-gradient(160deg, #fff4e9 0%, transparent 70%);
-    border-color: #ffdfd5;
-    --el-color-primary: #ff9a7a;
-    --el-color-primary-light-3: #ffcab8;
+    background: linear-gradient(160deg, #ffecda 0%, transparent 70%);
+    border-color: #ffc9b9;
+    --el-color-primary: #ff865f;
+    --el-color-primary-light-3: #ffa98c;
 }
 
 .card[rank="3"]:hover {
     box-shadow: 0 0 12px #ffdacecc;
 }
 
+.card[rank="3"] .right {
+    --el-text-color-regular: #ffa98c;
+}
+
 .card[rank="3"] .rank {
-    color: #ffdace;
+    color: #ffc9b9;
 }
 
 .card[rank="3"] .name {
-    color: #ff9a7a;
+    color: #ff8159;
 }
 </style>
 

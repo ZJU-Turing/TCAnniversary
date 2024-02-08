@@ -18,7 +18,8 @@ const $ = defineProps({
     font-size: 1.7rem;
     text-align: center;
     margin-top: 4rem;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
 }
 
 .subtitle {
@@ -31,6 +32,7 @@ const $ = defineProps({
 @media screen and (min-width: 650px) {
     .title {
         font-size: 2.2rem;
+        font-weight: 400;
     }
 }
 </style>
