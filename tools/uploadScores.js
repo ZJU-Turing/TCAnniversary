@@ -12,7 +12,8 @@ const rmNulls = (r) =>
 
 const getCSV = async () => {
     let csv = await fs.readFile(CSV_PATH, "utf8");
-    csv = csv.split("\n").slice(14).join("\n");
+    csv = csv.split("\n").slice(1).join("\n");
+    csv = csv.replace(",,,,", "昵称,类别,链接,详情,");
     csv = Papa.parse(csv, { header: true }).data;
     csv = csv.map(rmNulls);
     csv = csv.filter((r) => Object.keys(r).length);
@@ -24,8 +25,9 @@ const transform = (csv) => {
     for (let r of csv) {
         let t = { name: r["昵称"], type: r["类别"], link: r["链接"] };
         let cnt = 0;
+        let skip = ["昵称", "类别", "链接", "详情"];
         t.score = Object.entries(r).reduce((a, [k, v]) => {
-            if (k.endsWith("评分")) {
+            if (!skip.includes(k)) {
                 cnt++;
                 a += +v;
             }
