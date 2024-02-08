@@ -28,7 +28,7 @@ const $ = defineProps({
     margin-bottom: 3rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 650px) {
     .title {
         font-size: 2.2rem;
     }
