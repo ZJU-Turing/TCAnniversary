@@ -35,7 +35,7 @@ const more = () => { showComp.value = !showComp.value; };
                     </el-table-column>
                     <el-table-column align="center">
                         <template #default="{ row }">
-                            {{ row.score.toFixed(1) }} 分
+                            {{ row.score.toFixed(2) }} 分
                         </template>
                     </el-table-column>
                     <el-table-column align="center">
