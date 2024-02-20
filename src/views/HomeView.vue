@@ -14,7 +14,7 @@ const scoreFn = d => d.composition.reduce((acc, cur) => acc + cur.score, 0);
 
 const formatDate = d => {
     d = new Date(d);
-    return `${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日 ${d.getHours()}:${d.getMinutes()}`;
+    return `${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日 ${d.getHours()}:${String(d.getMinutes()).padStart(2, '0')}`;
 };
 
 const getData = async () => {
